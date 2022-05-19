@@ -1,0 +1,54 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 5 - Discussed on 30.03.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}[*]
+	To finish the proof of Li-Yau theorem from class let's show the following. Let $\int f = k$ and $0 \leq f \leq M$. Then
+	\begin{equation}
+	\label{eq}
+		\int f(\xi) |\xi|^2 \geq C_d k^{\frac{d+2}{d}} M^{-\frac{2}{d}}
+	\end{equation}
+	and find $C_d$.
+\end{exercise}
+
+\begin{exercise}
+	Show that the LHS of \eqref{eq} is minimal when $f$ is the step function $f = \chi_{B_R(0)} M$ for appropriately chosen $R$.
+\end{exercise}
+
+\begin{exercise}[*]
+	Prove Polya's conjecture $\lambda_k(\Omega) \geq C_d \left( \frac{k}{|\Omega|}\right)^\frac{2}{d}$ for tiling domains. Here $C_d$ is the same constant as appears in Weyl's law.
+\end{exercise}
+
+
+\end{document}

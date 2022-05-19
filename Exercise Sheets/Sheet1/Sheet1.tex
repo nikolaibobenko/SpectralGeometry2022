@@ -1,0 +1,87 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 1 - Discussed on 02.03.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}[*]
+	Assume that $u \in C^2(\Pi \times \mathbb{R}^+)$ solves $u_{xx} - u_t = 0$. Show that then for the convolution 
+	\[v_k(x,t) := u * e^{iky} (x,t) = \int_0^{2\pi} u(x - y, t) e^{iky} dy \]
+	the following holds.
+
+	\begin{enumerate}
+		\item $v_k$ solves the heat equation
+		\item $v_k(x,t) = c_k e^{ikx} e^{-k^2 t}$
+		\item Assuming $C^2$-smoothness show that 
+		\[ \frac{d}{dt} \int_0^{2\pi} u^2(x,t) dx \leq 0\]
+		\item Show that this implies uniqueness of the solution
+		\item Show that as $t \to \infty$ we have uniform convergence
+		\[ u(x, t) \rightrightarrows \strokedint_0^{2\pi} u(x, 0) dx \] 
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Green's formulas]
+	Using the divergence theorem $\int_\Omega \nabla \cdot F = \int_{\partial \Omega} F \cdot n$ where $n$ is the outward pointing normal on $\partial \Omega$ and $F$ is a vector field on the domain $\Omega$ show the following Green's identities.
+	\begin{enumerate}
+		\item $\int_\Omega \Delta u v + \int_\Omega \nabla u \cdot \nabla v = \int_{\partial \Omega} \partial_n u \cdot v$
+		\item $\int_\Omega \Delta u v - \int_\Omega u \Delta v = \int_{\partial \Omega} \partial_n u \cdot v - \int_{\partial \Omega} u \cdot \partial_n v$
+		\item Show that $\Delta$ eigenfunctions with different eigenvalues are orthogonal.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[*]
+	Given a measure $\mu$ in $\mathbb{R}^3$ we define $u_\mu = \mu * \frac{1}{|x|}$. Show that
+	\begin{enumerate}
+		\item $u_\mu$ is harmonic outside the support of $\mu$.
+		\item For a point mass $\delta_0$ show that 
+		\[\int_{\partial \Omega} \nabla u_{\delta_0} \cdot n = 0\]
+		if $0 \not\in \Omega$. Furthermore calculate $\int_{\partial \Omega} \nabla u_{\delta_0} \cdot n$ for $0 \in \Omega$.
+		\item Let $d>2$. Show that for $f \in \mathcal{C}^\infty_0(\mathbb{R}^d)$ the equation $\Delta u = f$ has a solution on $\mathbb{R}^d$ given by
+		\[u(x) = C_d \int_{\mathbb{R}^d} f(y) G(x,y) dy\]
+		where $G(x,y) = \frac{1}{|x-y|^{d-2}}$
+		\item Let $u$ be harmonic in $\Omega$. Show that then
+		\[\int_{\partial \Omega} G(x,y) \frac{\partial u}{\partial n} - \frac{\partial G(x,y)}{\partial n} u(y) dS(y)  = \begin{cases}
+			c_d u(x) &\text{ if } x \in \Omega \\
+			0 &\text{ otherwise}
+		\end{cases}\]
+		This provides a nice way to evaluate harmonic functions given its Cauchy data.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Show the rescaling equality
+	\[\lambda_1(k \Omega) = \frac{\lambda_1(\Omega)}{k^2}\]
+	where $\lambda_1(\Omega)$ is the smallest eigenvalue of $\Delta$ on $\Omega$ under Dirichlet boundary conditions.
+\end{exercise}
+
+
+\end{document}

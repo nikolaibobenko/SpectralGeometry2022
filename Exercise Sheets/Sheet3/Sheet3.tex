@@ -1,0 +1,80 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 3 - Discussed on 16.03.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+Leftovers from last week:
+
+\begin{exercise}
+	Let $\lambda > 0$. Show that any solution $\varphi$ to $\Delta^2 \varphi - \lambda^2 \varphi = 0$ can be written as $\varphi = \varphi_+ + \varphi_-$ where
+	\[ \Delta \varphi_+ + \lambda \varphi_+ = 0  \quad \text{ and } \quad \Delta \varphi_- - \lambda \varphi_- = 0 \]
+\end{exercise}
+
+\begin{exercise}
+	Let's remember that $\Delta_{\mathbb{R}^n} = \partial^2_r + \frac{n-1}{r} \partial_r + \frac{1}{r^2} \Delta_{S^{n-1}}$. Describe all harmonic functions in $\mathbb{R}^n$ that are rotationally invariant.
+\end{exercise}
+
+
+New exercises:
+
+\begin{exercise}[*]
+	Recall the definition of the Sobolev space $W^{1,2}(\Omega) = \{f \in L^2(\Omega) \text{ with } \nabla f \in L^2(\Omega)\}$ which is a Hilbert space with the inner product $\langle f, g \rangle_{W^{1,2}} = \langle f, g \rangle_2 + \langle \nabla f, \nabla g \rangle_2$. We denote by $W^{1,2}_0(\Omega)$ the closure of $C^\infty_0(\Omega)$ under $\|\cdot\|_{W^{1,2}}$.
+	\begin{enumerate}
+		\item Show that $f \equiv 1$ is not in $W^{1,2}_0(B_1)$.
+		\item Show that $1-|x|$ is in $W^{1,2}_0(B_1)$.
+		\item If $\Omega$ is a bounded Lipschitz domain and $u \in C^1(\bar{\Omega})$ and $u=0$ on $\partial \Omega$, then $u \in W^{1,2}_0(\Omega)$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[*]
+	Let $\Omega$ be a bounded domain. Show that there exists some $C$ such that for all $f \in C^\infty_0(\Omega)$ we have
+	\[ \int_\Omega |f|^2 \leq C \int_\Omega |\nabla f|^2. \]
+\end{exercise}
+
+\begin{exercise}
+	Like before we denote the k-th smallest eigenvalue of $\Delta$ on $\Omega$ under Dirichlet boundary conditions as $\lambda_k$. Show that
+	\[\lambda_k = \inf_{\substack{\dim(L) = k \\ L \subset W^{1,2}_0(\Omega)}} \sup_{f \in L} \frac{\int_\Omega |\nabla f|^2}{\int_\Omega |f|^2} \]
+\end{exercise}
+
+\begin{exercise}
+	Let $u$ be a harmonic function in $\mathbb{R}^n \setminus \{0\}$ and $|u| \leq 1$ in $B_1 \setminus \{ 0 \}$. Show that $u$ can be extended to a harmonic function on $B_1$.
+\end{exercise}
+
+\begin{exercise}[*]
+	For a function $u$ in $\mathbb{R}^3$ we define the Kelvin transform as
+	\[u^*(x) = \frac{1}{|x|} u(\frac{x}{|x|^2}).\]
+
+	Let $f(x) := \partial^{\alpha_1}_{x_1}\partial^{\alpha_2}_{x_2}\partial^{\alpha_3}_{x_3} \frac{1}{|x|}$. Show that $f^*$ is a harmonic polynomial of degree $\alpha_1 + \alpha_2 + \alpha_3$.
+\end{exercise}
+
+\end{document}

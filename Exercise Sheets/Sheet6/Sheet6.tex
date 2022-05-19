@@ -1,0 +1,71 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 6 - Discussed on 06.04.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}
+	Let $u$ be given by $u(x,t) = \int_\Omega f(y) p_\Omega(x,y,t) dy$ where $p_\Omega$ is the heat kernel associated to the domain $\Omega$. Show that
+	\[ ||u(\cdot,t) - f||_{L^2(\Omega)} \xrightarrow{t\to 0} 0. \]
+\end{exercise}
+
+\begin{exercise}
+	Let's work through the Wiener-Tauberian theorem.
+	\begin{enumerate}
+		\item Let $f \in L^1(\mathbb{R})$, $h \in L^\infty(\mathbb{R})$ and $\lim_{x \to \infty} h(x) = A$. Show that
+		\[ \lim_{x \to \infty} (f * h)(x) = A \int f. \] 
+
+		\item (hard): Let $f \in L^1(\mathbb{R})$. If $\hat{f}$ has no zeroes, then linear combinations of translations of $f$ are dense in $L^1(\mathbb{R})$.
+		\item Let $f \in L^1(\mathbb{R})$ with $\hat{f}$ having no zeroes and $h \in L^\infty(\mathbb{R}$ such that
+		\[ (f * h)(x) \xrightarrow{x \to \infty} A \int f. \]
+		Then for any $ g \in L^1(\mathbb{R})$ we also have
+		\[ (g * h)(x) \xrightarrow{x \to \infty} A \int g. \]
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Let $A$ be a finite and graph-connected subset of $\mathbb{Z}^d$ with discrete boundary $\partial A \subset \mathbb{Z}^d$. We define the linear operators $Q, \mathcal{L}$ by
+	\begin{align*}
+		Q F(x) &= \frac{1}{2d} \sum_{|x-y| = 1} F(y) \\
+		\mathcal{L} F (x) &= (Q - I) F (x).
+	\end{align*}
+	Show that there exists a unique function $p_n(x)$ that solves the Dirichlet heat equation:
+	\begin{alignat*}{2}
+		p_{n+1}(x) - p_n(x) &= \mathcal{L}p_n(x) ,& x \in A \\
+		p_0(x) &= f(x) ,& x \in A \\
+		p_n(x) &= 0 ,& x \in \partial A
+	\end{alignat*}
+	for any given initial function $f: A \to \mathbb{R}$. What is the probabilistic interpretation of this $p_n$? How can we compute $p_n$?
+\end{exercise}
+
+
+\end{document}

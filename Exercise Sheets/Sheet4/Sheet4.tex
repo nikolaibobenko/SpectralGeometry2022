@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, hyperref}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 4 - Discussed on 23.03.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}
+	Work through one of the proofs of the isoperimetric inequality found \href{https://math.jhu.edu/~amramor1/439_F19_supp1.pdf}{here}.
+\end{exercise}
+
+\begin{exercise}[*]
+	Let $D$ be a simply connected bounded domain in $\mathbb{R}^2$ and let $\lambda = \lambda_1(D)$ be the smallest eigenvalue of $-\Delta$ with Dirichlet boundary conditions. Show that there exist universal constants $c, C$ such that
+	\begin{enumerate}
+			\item one can inscribe a ball of size $\frac{c}{\sqrt{\lambda}}$ in $D$.
+			\item It is impossible to inscribe a ball of size $\frac{C}{\sqrt{\lambda}}$ in $D$.
+		\end{enumerate}	
+\end{exercise}
+
+\end{document}

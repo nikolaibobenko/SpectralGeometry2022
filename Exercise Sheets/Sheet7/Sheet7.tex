@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 7 - Discussed on 13.04.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}
+	Let's proove the local Weyl's law using Karamata's Tauberian theorem. Let $x, y \in \Omega$ be fixed. To this end
+	\begin{enumerate}
+		\item Show that $\sum_{\lambda_k \leq \lambda} |\varphi_k(x)|^2 \sim C_d \lambda^{\frac{d}{2}}.$
+		\item Show that $\frac{1}{\#\{\lambda_k \leq \lambda\}} \sum_{\lambda_k \leq \lambda} \varphi_k(x) \varphi_k(y) \xrightarrow{\lambda \to \infty} 0.$
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Eigenfunctions on the torus $\mathbb{T}^2$. 
+	\begin{enumerate}
+		\item Show that $\{e^{inx} e^{imy}\}_{n,m \in \mathbb{Z}}$ form and orthonormal basis of $L^2(\mathbb{T}^2)$.
+		\item Classify doubly periodic functions in $\mathbb{R}^2$ solving $\Delta u + \lambda u = 0$. For which $\lambda$ does a solution exist?
+		\item Prove Weyl's law in the case of a torus.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Show that if $p = 4k + 1$ is a prime then it can be written as the sum of two integer squares $p = a^2 + b^2$ where $a^2, b^2 > 1$.
+\end{exercise}
+
+\end{document}

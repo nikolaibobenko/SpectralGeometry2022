@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 11 - Discussed on 25.05.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}
+	Let $u$ be a harmonic function on a 2D Riemannian manifold $(M,g)$. Show that $\frac{1}{\sqrt{|g|}} \text{div}(A \nabla u) = 0$ for a matrix $A$ with $\det(A) = 1$. 
+\end{exercise}
+
+\begin{exercise}
+	Suppose that $u$ is harmonic on $B_R \setminus B_r \subset \mathbb{R}^2$. Let a line $L$ intersect the annulus $B_R \setminus B_r$ in two unconnected segments $L_1$ and $L_2$.
+
+	Show that if $\frac{R}{r} >> 1$ and $u = 0$ on $L_1$ then $u = 0$ on $L_2$.
+\end{exercise}
+
+\begin{exercise}
+	Let $u$ be harmonic and let's define its doubling index as $N_u(B) = \log \frac{\sup_{2B} |u|}{\sup_B |u|}$. Let $b \subset \frac{1}{4} B$. Show that then 
+	\[ N_u(b) \leq C N_u(B) + C. \]
+	\begin{enumerate}
+		\item Show this for $C$ dependent on $b$.
+		\item Show this for $C$ independent of $b$.  
+	\end{enumerate}
+\end{exercise}
+
+
+\end{document}

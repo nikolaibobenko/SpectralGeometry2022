@@ -1,0 +1,73 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 2 - Discussed on 09.03.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}
+	Let $\lambda > 0$. Show that any solution $\varphi$ to $\Delta^2 \varphi - \lambda^2 \varphi = 0$ can be written as $\varphi = \varphi_+ + \varphi_-$ where
+	\[ \Delta \varphi_+ + \lambda \varphi_+ = 0  \quad \text{ and } \quad \Delta \varphi_- - \lambda \varphi_- = 0 \]
+\end{exercise}
+
+\begin{exercise}[*]
+	Let $u$ be harmonic. Show that 
+	\begin{enumerate}
+		\item $u(x) = \strokedint_{B_r(x)} u(y) dy$
+		\item If $u \geq 0$ and harmonic in $2B$ then
+			\[\sup_B u \leq C_d \inf_B u\]
+		\item If $u>0$ in $\mathbb{R}^d$ then $u$ is constant.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[*]
+	Let the eigenvalues of $A$ be uniformly bounded away from $0$ and $\infty$ by $c$ and $C$. Using the oscilation inequality show that any $u$ satisfying 
+	\[\text{div}(A \nabla u) = 0\]
+	is $\alpha$-Hölder continuous where $\alpha$ may depend on $c$ and $C$.
+\end{exercise}
+
+\begin{exercise}
+	Let $\Delta u + u = 0$ in $\mathbb{R}^d$. Show that there is an $r$ such that
+	\[ \int_{\partial B_r} u = 0. \]
+\end{exercise}
+
+\begin{exercise}[*]
+	Show that for any non-zero solution to $\Delta u - u = 0$ in $\mathbb{R}^d$ we have 
+	\[ \max_{\partial B_R} u \gtrsim e^{CR} \]
+\end{exercise}
+
+\begin{exercise}
+	Let's remember that $\Delta_{\mathbb{R}^n} = \partial^2_r + \frac{n-1}{r} \partial_r + \frac{1}{r^2} \Delta_{S^{n-1}}$. Describe all harmonic functions in $\mathbb{R}^n$ that are rotationally invariant.
+\end{exercise}
+
+
+
+\end{document}

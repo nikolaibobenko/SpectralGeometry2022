@@ -1,0 +1,70 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+% \usepackage[french]{babel}
+% \usepackage[latin1]{inputenc}
+%\usepackage{umlaut,amssymb,amsmath,amscd,a4,amsfonts}
+\usepackage{amssymb,amsmath,amscd,a4,amsfonts,amsthm}
+\usepackage{MnSymbol, exercise}
+%(a4 = 210 X 297 mm)
+\hoffset -1in \voffset -1in \oddsidemargin 20mm \evensidemargin
+\oddsidemargin \textwidth 170mm \topmargin 5mm \textheight 247mm
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+
+
+\begin{document}
+
+\pagestyle{headings}
+\noindent UNIVERSITE DE GENEVE \hfill Section de Mathématiques\\
+\noindent Facult\'e des sciences \hfill \\[-3mm]
+\hrule
+
+\large
+
+\begin{center}
+\textbf{Spectral Geometry - SS 2022 \\ Sheet 10 - Discussed on 18.05.2022}
+\end{center}
+\hrule
+\text{}\\[1cm]
+
+Obligatory exercises are marked with a $(*)$. We ask you to solve these and be ready to present your solutions during the exercise session. Let me know one day in advance which ones you were able to solve and I will randomly assign some of you to present your solutions. You will get points for the exercises you announced as solved with possible deductions if your presentation is lacking.
+
+\begin{exercise}
+	Let $f$ be a holomorphic function in the ball $B_5$ and $N$ be the number of zeroes of $f$ in $B_1$.
+	Show that 
+	\[ \frac{\max_{B_5} |f|}{\max_{B_1} |f|} \geq e^{cN}.\]
+\end{exercise}
+
+
+
+\begin{exercise}
+	Let $\Delta u = 0$ in $\mathbb{R}^n$ and $u(x) = \sum a_k p_k(x)$ its series expansion into homogeneous polynomials $p_k(x) = |x|^k p_k(\frac{x}{|x|})$. This expansion converges locally around $0$ since $u$ is real analytic.
+	\begin{enumerate}
+		\item Show that the $p_k$ are harmonic.
+		\item Show $\int_{\partial B_1} p_k p_l = 0$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+	Show that any absolutely monotone function $f(r)$ satisfies that $\log f(e^t)$ is a convex function of $t$.
+\end{exercise}
+
+\begin{exercise}
+	We define $H(r) := \strokedint_{\partial B_r} u^2$. Then we call $F(r) = \frac{r H'(r)}{H(r)}$ the frequency. Show that monotonicity of frequency implies
+	\[ \left(\frac{R}{r}\right)^{F(r)} \leq \frac{H(R)}{H(r)} \leq \left(\frac{R}{r}\right)^{F(R)} \]
+	and that the three balls theorem holds for $L^2$ averages.
+\end{exercise}
+
+\begin{exercise}
+	Show that if $u = \sum_{k=0}^n p_k(x)$ is a sum of harmonic $k$-homogeneous polynomials then $F(r) \leq 2n$.
+\end{exercise}
+
+\begin{exercise}
+	Show that if $\Omega_1 \subset\subset \Omega_2 \subset\subset \Omega_3$ with $\Omega_1$ open and $\Omega_3$ bounded then there exists some $\alpha \in (0,1)$ such that for any harmonic function $u$ we have that $|u| \leq \epsilon$ on $\Omega_1$ and $|u| \leq 1$ on $\Omega_3$ implies $u \leq \epsilon^\alpha$ on $\Omega_2$.
+\end{exercise}
+
+\end{document}
